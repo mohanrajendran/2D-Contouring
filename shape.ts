@@ -1,5 +1,5 @@
 /// <reference path="point.ts" />
 
-interface Shape {
-	location (point: Point): number;
+interface Shape{
+	(point: Point): number;
 }

@@ -1,49 +1,25 @@
 /// <reference path="shape.ts" />
 
-class Left implements Shape{
-	private _x: number;
-	
-	constructor(x: number) {
-		this._x = x;
-	}
-	
-	location(point: Point): number {
-		return point.x - this._x;
+function Left(x0: number): Shape {
+	return function(point: Point): number {
+		return point.x - x0;
 	}
 }
 
-class Right implements Shape{
-	private _x: number;
-	
-	constructor(x: number) {
-		this._x = x;
-	}
-	
-	location(point: Point): number {
-		return this._x - point.x;
+function Right(x0: number): Shape {
+	return function(point: Point): number {
+		return x0 - point.x;
 	}
 }
 
-class Lower implements Shape{
-	private _y: number;
-	
-	constructor(y: number) {
-		this._y = y;
-	}
-	
-	location(point: Point): number {
-		return point.y - this._y;
+function Upper(y0: number): Shape {
+	return function(point: Point): number {
+		return point.y - y0;
 	}
 }
 
-class Upper implements Shape{
-	private _y: number;
-	
-	constructor(y: number) {
-		this._y = y;
-	}
-	
-	location(point: Point): number {
-		return this._y - point.y;
+function Lower(y0: number): Shape {
+	return function(point: Point): number {
+		return y0 - point.y;
 	}
 }
