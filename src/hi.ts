@@ -6,7 +6,7 @@
 function hi(): Shape {
 	var rect1 = Rectangle(new Point(0.1, 0.1), new Point(0.25, 0.9));
 	var rect2 = Rectangle(new Point(0.1, 0.1), new Point(0.6, 0.35));
-	var circle1 = Circle(new Point(0.35, 0.35), 0.35);
+	var circle1 = Circle(new Point(0.35, 0.35), 0.25);
 	var circle2 = Circle(new Point(0.35, 0.35), 0.1);
 	var rect3 = Rectangle(new Point(0.25, 0.1), new Point(0.45, 0.35));
 

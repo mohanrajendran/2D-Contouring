@@ -1,3 +1,5 @@
+'use strict'
+
 class Point{
 	private _x: number;
 	private _y: number;

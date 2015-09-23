@@ -12,13 +12,13 @@ function Right(x0: number): Shape {
 	}
 }
 
-function Upper(y0: number): Shape {
+function Lower(y0: number): Shape {
 	return function(point: Point): number {
 		return point.y - y0;
 	}
 }
 
-function Lower(y0: number): Shape {
+function Upper(y0: number): Shape {
 	return function(point: Point): number {
 		return y0 - point.y;
 	}
