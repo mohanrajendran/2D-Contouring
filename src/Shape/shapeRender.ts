@@ -1,9 +1,8 @@
 /// <reference path="shape.ts" />
 
-function shapeRender(shape: Shape, canvas: HTMLCanvasElement) {
+function shapeRender(shape: Shape, canvas: HTMLCanvasElement, pixelSize: number) {
 	var absHeight = 1;
 	var absWidth = 1;
-	var pixelSize = 0.001;
 	var width = absWidth / pixelSize;
 	var height = absHeight / pixelSize;
 

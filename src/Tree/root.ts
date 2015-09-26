@@ -1,6 +1,8 @@
 /// <reference path="tree.ts" />
 
 class Root implements Tree {
+	min: Point
+	max: Point
 	topLeft: Tree;
 	topRight: Tree;
 	bottomLeft: Tree;
@@ -13,6 +15,9 @@ class Root implements Tree {
 		root.topRight = topRight;
 		root.bottomLeft = bottomLeft;
 		root.bottomRight = bottomRight;
+		
+		root.min = bottomLeft.min;
+		root.max = topRight.max;
 	}
 	
 	render(canvas: HTMLCanvasElement): void {

@@ -23,6 +23,18 @@ class Leaf implements Tree {
 		var yMax = Math.round(leaf.max.y * height);	
 		
 		var ctx = canvas.getContext('2d');
-		ctx.strokeRect(xMin, yMin, (xMax - xMin), (yMax - yMin));
+		ctx.strokeRect(xMin, height-yMax, (xMax - xMin), (yMax - yMin));
+	}
+}
+
+class Empty extends Leaf {	
+	constructor(min: Point, max: Point) {
+		super(min, max);
+	}
+}
+
+class Full extends Leaf {
+	constructor(min: Point, max: Point) {
+		super(min, max);
 	}
 }

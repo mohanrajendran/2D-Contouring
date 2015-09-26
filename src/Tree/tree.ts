@@ -1,13 +1,7 @@
 /// <reference path="../Shape/point.ts" />
 
 interface Tree {
+	min: Point;
+	max: Point;
 	render(canvas: HTMLCanvasElement): void 
-}
-
-class Full implements Tree {
-	render(canvas: HTMLCanvasElement): void {}
-}
-
-class Empty implements Tree {
-	render(canvas: HTMLCanvasElement): void {}
 }
