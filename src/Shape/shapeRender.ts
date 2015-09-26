@@ -3,7 +3,7 @@
 function shapeRender(shape: Shape, canvas: HTMLCanvasElement) {
 	var absHeight = 1;
 	var absWidth = 1;
-	var pixelSize = 0.004;
+	var pixelSize = 0.001;
 	var width = absWidth / pixelSize;
 	var height = absHeight / pixelSize;
 
@@ -19,7 +19,7 @@ function shapeRender(shape: Shape, canvas: HTMLCanvasElement) {
 	}
 
 	for (var y = 0; y < height; y++) {
-		console.log(y);
+		//console.log(y);
 		for (var x = 0; x < width; x++) {
 			var idx = xyToIndex(x, y);
 			//console.log(idx);

@@ -18,6 +18,9 @@
     document.body.appendChild(canvas);
     
     shapeRender(hi(), canvas);
+    
+    var tree = buildTree(new Point(0,0), new Point(1.0,1.0), 6);
+    tree.render(canvas);
 </script>
 
 </html>
