@@ -23,12 +23,6 @@ class Leaf implements Tree {
 		var yMax = Math.round(leaf.max.y * height);	
 		
 		var ctx = canvas.getContext('2d');
-		ctx.beginPath();
-		ctx.moveTo(xMin, yMin);
-		ctx.lineTo(xMin, yMax);
-		ctx.lineTo(xMax, yMax);	
-		ctx.lineTo(xMax, yMin);
-		ctx.lineTo(xMin, yMin);
-		ctx.stroke();
+		ctx.strokeRect(xMin, yMin, (xMax - xMin), (yMax - yMin));
 	}
 }
