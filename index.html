@@ -4,9 +4,6 @@
 <head>
     <meta charset=utf-8 />
     <title>Shape display</title>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
-    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="contour.js"></script>
 </head>
 
@@ -17,11 +14,14 @@
     var canvas = document.createElement('canvas');
     document.body.appendChild(canvas);
     
-    shapeRender(hi(), canvas, 0.001);
+    //var shape = Union(Circle(new Point(0.25, 0.25), 0.1), Circle(new Point(0.75, 0.75), 0.1));
+    var shape = hi();
+    //var shape = Circle(new Point(0.5, 0.5), 0.5);
+    shapeRender(shape, canvas, 0.001);
     
-    var tree = buildTree(new Point(0,0), new Point(1.0,1.0), 8);
+    var tree = buildTree(new Point(0,0), new Point(1.0,1.0), 7);
     //tree.render(canvas);
-    var collapsedTree = collapse(hi(), tree);
+    var collapsedTree = collapse(shape, tree);
     collapsedTree.render(canvas);
 </script>
 
