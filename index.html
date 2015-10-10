@@ -17,9 +17,9 @@
     //var shape = Union(Circle(new Point(0.25, 0.25), 0.1), Circle(new Point(0.75, 0.75), 0.1));
     var shape = hi();
     //var shape = Circle(new Point(0.5, 0.5), 0.5);
-    shapeRender(shape, canvas, 0.001);
+    shapeRender(shape, canvas, 0.002);
     
-    var tree = buildTree(new Point(0,0), new Point(1.0,1.0), 7);
+    var tree = buildTree(new Point(0,0), new Point(1.0,1.0), 6);
     //tree.render(canvas);
     var collapsedTree = collapse(shape, tree);
     collapsedTree.render(canvas);
