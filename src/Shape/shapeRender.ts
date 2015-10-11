@@ -25,10 +25,10 @@ function shapeRender(shape: Shape, canvas: HTMLCanvasElement, pixelSize: number)
 			var val = shape(new Point(x * pixelSize, y * pixelSize));
 			
 			if(val < 0)	{
-			// data[idx] = 120;
-			// data[idx + 1] = 120;
-			// data[idx + 2] = 120;
-			// data[idx + 3] = 255;
+			data[idx] = 220;
+			data[idx + 1] = 220;
+			data[idx + 2] = 220;
+			data[idx + 3] = 255;
 			}
 		}
 	}

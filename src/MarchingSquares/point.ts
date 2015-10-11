@@ -23,9 +23,9 @@ function zero(shape: Shape, start: Point, end: Point): Point {
 			return p;
 		
 		if (shape(pos(p)) > 0)
-			return secant(p - step, step/2, iter-1);
-		else
 			return secant(p + step, step/2, iter-1);
+		else
+			return secant(p - step, step/2, iter-1);
 	}
 	
 	if(shape(start) >= 0)
